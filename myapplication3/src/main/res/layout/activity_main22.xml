@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2_2">
+
+    <EditText
+        android:id="@+id/editText04"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="231dp"
+        tools:layout_editor_absoluteY="176dp" />
+
+    <EditText
+        android:id="@+id/editText03"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:iconTint="#8F1B1B"
+        tools:layout_editor_absoluteX="281dp"
+        tools:layout_editor_absoluteY="126dp" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="476dp" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="376dp" />
+
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="526dp" />
+
+    <EditText
+        android:id="@+id/editText01"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="231dp"
+        tools:layout_editor_absoluteY="126dp" />
+
+    <EditText
+        android:id="@+id/editText7"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="276dp" />
+
+    <EditText
+        android:id="@+id/editText8"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="576dp" />
+
+    <EditText
+        android:id="@+id/editText9"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="231dp"
+        tools:layout_editor_absoluteY="226dp" />
+
+    <EditText
+        android:id="@+id/editText10"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="226dp" />
+
+    <EditText
+        android:id="@+id/editText11"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="326dp" />
+
+    <EditText
+        android:id="@+id/editText12"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="276dp" />
+
+    <EditText
+        android:id="@+id/editText13"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="476dp" />
+
+    <EditText
+        android:id="@+id/editText14"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="281dp"
+        tools:layout_editor_absoluteY="576dp" />
+
+    <EditText
+        android:id="@+id/editText15"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="176dp" />
+
+    <EditText
+        android:id="@+id/editText02"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="281dp"
+        tools:layout_editor_absoluteY="176dp" />
+
+    <EditText
+        android:id="@+id/editText17"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:iconTint="#8F1B1B"
+        tools:layout_editor_absoluteX="281dp"
+        tools:layout_editor_absoluteY="376dp" />
+
+    <EditText
+        android:id="@+id/editText18"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="231dp"
+        tools:layout_editor_absoluteY="426dp" />
+
+    <EditText
+        android:id="@+id/editText19"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="281dp"
+        tools:layout_editor_absoluteY="526dp" />
+
+    <EditText
+        android:id="@+id/editText20"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="526dp" />
+
+    <EditText
+        android:id="@+id/editText21"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="281dp"
+        tools:layout_editor_absoluteY="276dp" />
+
+    <EditText
+        android:id="@+id/editText22"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="281dp"
+        tools:layout_editor_absoluteY="426dp" />
+
+    <EditText
+        android:id="@+id/editText23"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="326dp" />
+
+    <EditText
+        android:id="@+id/editText24"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="326dp" />
+
+    <EditText
+        android:id="@+id/editText25"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="281dp"
+        tools:layout_editor_absoluteY="476dp" />
+
+    <EditText
+        android:id="@+id/editText26"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="426dp" />
+
+    <EditText
+        android:id="@+id/editText27"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="426dp" />
+
+    <EditText
+        android:id="@+id/editText28"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="126dp" />
+
+    <EditText
+        android:id="@+id/editText29"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="176dp" />
+
+    <EditText
+        android:id="@+id/editText30"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="526dp" />
+
+    <EditText
+        android:id="@+id/editText31"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="176dp" />
+
+    <EditText
+        android:id="@+id/editText32"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="281dp"
+        tools:layout_editor_absoluteY="226dp" />
+
+    <EditText
+        android:id="@+id/editText33"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="180dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.405" />
+
+    <EditText
+        android:id="@+id/editText34"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="231dp"
+        tools:layout_editor_absoluteY="476dp" />
+
+    <EditText
+        android:id="@+id/editText35"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="376dp" />
+
+    <EditText
+        android:id="@+id/editText36"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="231dp"
+        tools:layout_editor_absoluteY="576dp" />
+
+    <EditText
+        android:id="@+id/editText37"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="376dp" />
+
+    <EditText
+        android:id="@+id/editText38"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="226dp" />
+
+    <EditText
+        android:id="@+id/editText39"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="231dp"
+        tools:layout_editor_absoluteY="526dp" />
+
+    <EditText
+        android:id="@+id/editText40"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="226dp" />
+
+    <EditText
+        android:id="@+id/editText41"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="231dp"
+        tools:layout_editor_absoluteY="276dp" />
+
+    <EditText
+        android:id="@+id/editText42"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="476dp" />
+
+    <EditText
+        android:id="@+id/editText43"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="126dp" />
+
+    <EditText
+        android:id="@+id/editText44"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.639"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="326dp" />
+
+    <EditText
+        android:id="@+id/editText45"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="231dp"
+        tools:layout_editor_absoluteY="376dp" />
+
+    <EditText
+        android:id="@+id/editText46"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="576dp" />
+
+    <EditText
+        android:id="@+id/editText47"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="126dp" />
+
+    <EditText
+        android:id="@+id/editText48"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="281dp"
+        tools:layout_editor_absoluteY="326dp" />
+
+    <EditText
+        android:id="@+id/editText49"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="576dp" />
+
+    <EditText
+        android:id="@+id/editText50"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="426dp" />
+
+    <Button
+        android:id="@+id/button39"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="実行"
+        tools:layout_editor_absoluteX="243dp"
+        tools:layout_editor_absoluteY="654dp" />
+
+    <Button
+        android:id="@+id/button45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="クリア"
+        tools:layout_editor_absoluteX="79dp"
+        tools:layout_editor_absoluteY="655dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="350dp"
+        android:layout_height="75dp"
+        android:text= "スタートとゴールを選択"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#D81414"
+        android:textColorHighlight="#3F51B5"
+        android:textIsSelectable="false"
+        android:textSize="31sp"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="27dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

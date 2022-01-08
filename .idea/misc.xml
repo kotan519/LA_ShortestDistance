@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/915ko/AndroidStudioProjects/1117/app/src/main/res/layout/activity_main1.xml" value="0.33" />
+        <entry key="..\:/Users/915ko/AndroidStudioProjects/1117/app/src/main/res/layout/fivefive_answer_window.xml" value="0.33" />
+        <entry key="..\:/Users/915ko/AndroidStudioProjects/1117/app/src/main/res/layout/fivefive_result_window.xml" value="0.25" />
+        <entry key="..\:/Users/915ko/AndroidStudioProjects/1117/app/src/main/res/layout/fivefive_s_window.xml" value="0.5" />
+        <entry key="..\:/Users/915ko/AndroidStudioProjects/1117/app/src/main/res/layout/fivefive_sg_window.xml" value="0.33" />
+        <entry key="..\:/Users/915ko/AndroidStudioProjects/1117/app/src/main/res/layout/fivefive_wall_window.xml" value="0.33" />
+        <entry key="..\:/Users/915ko/AndroidStudioProjects/1117/app/src/main/res/layout/fivefive_window.xml" value="0.28940217391304346" />
+        <entry key="..\:/Users/915ko/AndroidStudioProjects/1117/app/src/main/res/layout/start_window.xml" value="0.28940217391304346" />
+        <entry key="..\:/Users/Student 2/AndroidStudioProjects/1117/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Student 2/AndroidStudioProjects/1117/app/src/main/res/layout/activity_main1.xml" value="0.5" />
+        <entry key="..\:/Users/Student 2/AndroidStudioProjects/1117/myapplication/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Student 2/AndroidStudioProjects/1117/myapplication/src/main/res/layout/activity_main2.xml" value="0.33" />
+        <entry key="..\:/Users/Student 2/AndroidStudioProjects/1117/myapplication2/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Student 2/AndroidStudioProjects/1117/myapplication2/src/main/res/layout/activity_main3.xml" value="0.32608695652173914" />
+        <entry key="..\:/Users/Student 2/AndroidStudioProjects/1117/myapplication3/src/main/res/layout/activity_main22.xml" value="0.35260416666666666" />
+        <entry key="..\:/Users/Student 2/AndroidStudioProjects/1117/myapplication4/src/main/res/layout/activity_main12.xml" value="0.33" />
+        <entry key="..\:/Users/Student 2/AndroidStudioProjects/1117/myapplication5/src/main/res/layout/activity_main4.xml" value="0.35260416666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

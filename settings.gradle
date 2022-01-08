@@ -1,0 +1,15 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+    }
+}
+rootProject.name = "1117"
+include ':app'
+include ':myapplication'
+include ':myapplication2'
+include ':myapplication3'
+include ':myapplication4'
+include ':myapplication5'

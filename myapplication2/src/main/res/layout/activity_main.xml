@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity3">
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="56dp"
+        android:text="7×7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.228"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        tools:layout_editor_absoluteY="403dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="16dp"
+        android:text="5×5"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="403dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="5×10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="403dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:text="遊び方"
+        android:textAlignment="center"
+        android:textIsSelectable="false"
+        android:textSize="34sp"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="195dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="300dp"
+        android:layout_height="24dp"
+        android:text="②実行ボタンを押してスタート　"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="288dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="300dp"
+        android:layout_height="24dp"
+        android:text="①スタートとゴールを決める　"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="252dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="最短経路"
+        android:textSize="60sp"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="39dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="56dp"
+        android:text="次へ"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="568dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
