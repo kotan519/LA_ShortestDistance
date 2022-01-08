@@ -20,7 +20,7 @@ class resultActivity : AppCompatActivity() {
             val intent = Intent(this, fivefiveAnswerActivity::class.java)
             val Answer = findViewById<EditText>(R.id.answer)
 
-            intent.putExtra("Result",result.text.toString())
+            intent.putExtra("Result",result.toString())
             intent.putExtra("answer",Answer.text.toString())
 
             startActivity(intent)
@@ -57,6 +57,17 @@ class resultActivity : AppCompatActivity() {
     val ary42 : Int = intent.getStringExtra("wall42").toString().toInt()
     val ary43 : Int = intent.getStringExtra("wall43").toString().toInt()
     val ary44 : Int = intent.getStringExtra("wall44").toString().toInt()
+
+    var result: String? = null
+
+    companion object {
+        private var instance : resultActivity? = null
+        fun  getInstance():  resultActivity{
+            if (instance == null)
+                instance = resultActivity()
+            return instance!!
+        }
+    }
 }
 
 class GetArray(val ResultActivity:resultActivity) {
@@ -129,13 +140,17 @@ class GetArray(val ResultActivity:resultActivity) {
     }
 }
 class Search(val grid: Grid) {
+
     fun execute(weight: Double) {
+
+        val resultAct = resultActivity.getInstance()
         val costs = weightedAsterCost(weight)
+
         if (costs == null) {
             println("unreachable")
             return
         }
-        var result = costs[grid.goal]
+        resultAct.result = costs[grid.goal].toString()
     }
 
     private fun weightedAsterCost(weight: Double): Map<P, Int>? {
