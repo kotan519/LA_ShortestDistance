@@ -134,8 +134,8 @@ class resultActivity : AppCompatActivity() {
                     arrayOf(a0, a1, a2, a3, a4),
                     arrayOf(b0, b1, b2, b3, b4),
                     arrayOf(c0, c1, c2, c3, c4),
-                    arrayOf(d0, d1, d2, d3, d4,),
-                    arrayOf(e0, e1, e2, e3, e4,),
+                    arrayOf(d0, d1, d2, d3, d4),
+                    arrayOf(e0, e1, e2, e3, e4),
                 )
                 return
             }
