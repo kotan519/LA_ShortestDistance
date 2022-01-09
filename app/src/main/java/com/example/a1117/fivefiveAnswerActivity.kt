@@ -17,7 +17,7 @@ class fivefiveAnswerActivity : AppCompatActivity() {
 
         //val UnCorrectResult = intent.getStringExtra("UnCorrectResult")
         //val CorrectResult = intent.getIntExtra("CorrectResult",0)
-        val Answer = intent.getIntExtra("answer",0)
+        val Answer = intent.getIntExtra("answer",1)
 
         val AnswerText = findViewById<TextView>(R.id.answerText)
         val CorrectAnswer = findViewById<TextView>(R.id.correctAnswer)

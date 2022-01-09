@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 import kotlin.math.abs
 import android.content.Intent
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
 
@@ -152,13 +151,6 @@ class PC(val point: P, private val cost: Double) : Comparable<PC> {
     }
 }
 
-class Path {
-    val points = mutableListOf<P>()
-    fun addPoint(point: P) {
-        points.add(point)
-    }
-}
-
 //5,5
 class Grid(val start: P, val goal: P) {
     val ffResultAct = fivefiveResultActivity.getInstance()
@@ -167,7 +159,7 @@ class Grid(val start: P, val goal: P) {
         arrayOf(ffResultAct.ary10, ffResultAct.ary11, ffResultAct.ary12, ffResultAct.ary13, ffResultAct.ary14),
         arrayOf(ffResultAct.ary20, ffResultAct.ary21, ffResultAct.ary22, ffResultAct.ary23, ffResultAct.ary24),
         arrayOf(ffResultAct.ary30, ffResultAct.ary31, ffResultAct.ary32, ffResultAct.ary33, ffResultAct.ary34),
-        arrayOf(ffResultAct.ary40, ffResultAct.ary41, ffResultAct.ary42, ffResultAct.ary43, ffResultAct.ary44),
+        arrayOf(ffResultAct.ary40, ffResultAct.ary41, ffResultAct.ary42, ffResultAct.ary43, ffResultAct.ary44)
     )
 
     fun isValid(n: P): Boolean {
