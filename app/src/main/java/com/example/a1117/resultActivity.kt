@@ -6,10 +6,7 @@ import java.util.*
 import kotlin.math.abs
 import android.content.Intent
 import android.view.View
-import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
-import java.sql.Ref
 
 class resultActivity : AppCompatActivity() {
     var startyoko = 0
@@ -48,36 +45,36 @@ class resultActivity : AppCompatActivity() {
         setContentView(R.layout.fivefive_result_window)
 
         val resultAct = resultActivity.getInstance()
-        resultAct.startyoko = intent.getStringExtra("startYoko").toString().toInt()
-        resultAct.starttate = intent.getStringExtra("startTate").toString().toInt()
-        resultAct.goalyoko = intent.getStringExtra("goalYoko").toString().toInt()
-        resultAct.goaltate= intent.getStringExtra("goalTate").toString().toInt()
+        resultAct.startyoko = intent.getIntExtra("startYoko", 0)
+        resultAct.starttate = intent.getIntExtra("startTate", 0)
+        resultAct.goalyoko = intent.getIntExtra("goalYoko", 0)
+        resultAct.goaltate= intent.getIntExtra("goalTate", 0)
 
-        resultAct.ary00 = intent.getStringExtra("wall00").toString().toInt()
-        resultAct.ary00 = intent.getStringExtra("wall01").toString().toInt()
-        resultAct.ary00 = intent.getStringExtra("wall02").toString().toInt()
-        resultAct.ary00 = intent.getStringExtra("wall03").toString().toInt()
-        resultAct.ary00 = intent.getStringExtra("wall04").toString().toInt()
-        resultAct.ary00 = intent.getStringExtra("wall10").toString().toInt()
-        resultAct.ary00 = intent.getStringExtra("wall11").toString().toInt()
-        resultAct.ary00 = intent.getStringExtra("wall12").toString().toInt()
-        resultAct.ary00 = intent.getStringExtra("wall13").toString().toInt()
-        resultAct.ary00 = intent.getStringExtra("wall14").toString().toInt()
-        resultAct.ary00 = intent.getStringExtra("wall20").toString().toInt()
-        resultAct.ary00 = intent.getStringExtra("wall21").toString().toInt()
-        resultAct.ary00 = intent.getStringExtra("wall22").toString().toInt()
-        resultAct.ary00 = intent.getStringExtra("wall23").toString().toInt()
-        resultAct.ary00 = intent.getStringExtra("wall24").toString().toInt()
-        resultAct.ary00 = intent.getStringExtra("wall30").toString().toInt()
-        resultAct.ary00 = intent.getStringExtra("wall31").toString().toInt()
-        resultAct.ary00 = intent.getStringExtra("wall32").toString().toInt()
-        resultAct.ary00 = intent.getStringExtra("wall33").toString().toInt()
-        resultAct.ary00 = intent.getStringExtra("wall34").toString().toInt()
-        resultAct.ary00 = intent.getStringExtra("wall40").toString().toInt()
-        resultAct.ary00 = intent.getStringExtra("wall41").toString().toInt()
-        resultAct.ary00 = intent.getStringExtra("wall42").toString().toInt()
-        resultAct.ary00 = intent.getStringExtra("wall43").toString().toInt()
-        resultAct.ary00 = intent.getStringExtra("wall44").toString().toInt()
+        resultAct.ary00 = intent.getIntExtra("wall00", 0)
+        resultAct.ary00 = intent.getIntExtra("wall01", 0)
+        resultAct.ary00 = intent.getIntExtra("wall02", 0)
+        resultAct.ary00 = intent.getIntExtra("wall03", 0)
+        resultAct.ary00 = intent.getIntExtra("wall04", 0)
+        resultAct.ary00 = intent.getIntExtra("wall10", 0)
+        resultAct.ary00 = intent.getIntExtra("wall11", 0)
+        resultAct.ary00 = intent.getIntExtra("wall12", 0)
+        resultAct.ary00 = intent.getIntExtra("wall13", 0)
+        resultAct.ary00 = intent.getIntExtra("wall14", 0)
+        resultAct.ary00 = intent.getIntExtra("wall20", 0)
+        resultAct.ary00 = intent.getIntExtra("wall21", 0)
+        resultAct.ary00 = intent.getIntExtra("wall22", 0)
+        resultAct.ary00 = intent.getIntExtra("wall23", 0)
+        resultAct.ary00 = intent.getIntExtra("wall24", 0)
+        resultAct.ary00 = intent.getIntExtra("wall30", 0)
+        resultAct.ary00 = intent.getIntExtra("wall31", 0)
+        resultAct.ary00 = intent.getIntExtra("wall32", 0)
+        resultAct.ary00 = intent.getIntExtra("wall33", 0)
+        resultAct.ary00 = intent.getIntExtra("wall34", 0)
+        resultAct.ary00 = intent.getIntExtra("wall40", 0)
+        resultAct.ary00 = intent.getIntExtra("wall41", 0)
+        resultAct.ary00 = intent.getIntExtra("wall42", 0)
+        resultAct.ary00 = intent.getIntExtra("wall43", 0)
+        resultAct.ary00 = intent.getIntExtra("wall44", 0)
     }
 
     fun onbuttonClick(view: View) {
@@ -90,7 +87,7 @@ class resultActivity : AppCompatActivity() {
     }
 
 
-    var result: String? = null
+    var result : String = ""
     var states = arrayOf(
         arrayOf(0, 0, 0, 0, 0),
         arrayOf(0, 0, 0, 0, 0),
@@ -178,10 +175,11 @@ class resultActivity : AppCompatActivity() {
             val costs = weightedAsterCost(weight)
 
             if (costs == null) {
-                println("unreachable")
+                resultAct.result = "unreachable"
                 return
+            }else{
+                resultAct.result = costs[grid.goal].toString()
             }
-            resultAct.result = costs[grid.goal].toString()
         }
 
         private fun weightedAsterCost(weight: Double): Map<P, Int>? {
@@ -244,32 +242,7 @@ class resultActivity : AppCompatActivity() {
         fun neighbors(n: P): List<P> {
             return n.around().filter { isValid(it) && isEmpty(it) }
         }
-
-        fun print(path: Path = Path()) {
-            val resultAct = resultActivity.getInstance()
-            val sb = StringBuilder()
-            sb.append("\n")
-
-            for (i in resultAct.states.indices) {
-                for (j in resultAct.states[i].indices) {
-                    val s = resultAct.states[i][j]
-                    val c = when {
-                        P(i, j) == start -> " S "
-                        P(i, j) == goal -> " G "
-                        path.points.contains(P(i, j)) -> " @ "
-                        s == 0 -> "   "
-                        s == 1 -> " * "
-                        else -> throw IllegalStateException("unknown state $s")
-                    }
-
-                    sb.append(c)
-                }
-                sb.append("\n")
-            }
-            print(sb.toString())
-        }
     }
-
     //Pointclass
     data class P(val i: Int, val j: Int) {
         fun around(): Array<P> {
