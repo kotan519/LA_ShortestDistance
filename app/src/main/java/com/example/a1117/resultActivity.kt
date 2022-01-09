@@ -48,7 +48,7 @@ class resultActivity : AppCompatActivity() {
         resultAct.startyoko = intent.getIntExtra("startYoko", 0)
         resultAct.starttate = intent.getIntExtra("startTate", 0)
         resultAct.goalyoko = intent.getIntExtra("goalYoko", 0)
-        resultAct.goaltate= intent.getIntExtra("goalTate", 0)
+        resultAct.goaltate = intent.getIntExtra("goalTate", 0)
 
         resultAct.ary00 = intent.getIntExtra("wall00", 0)
         resultAct.ary00 = intent.getIntExtra("wall01", 0)
@@ -79,15 +79,15 @@ class resultActivity : AppCompatActivity() {
 
     fun onbuttonClick(view: View) {
         val intent = Intent(this, fivefiveAnswerActivity::class.java)
-        val Answer = findViewById<EditText>(R.id.answer)
-        intent.putExtra("Result", result.toString())
-        intent.putExtra("answer", Answer.toString())
+        val Answer = findViewById<EditText>(R.id.answer).toString()
+        intent.putExtra("Result", result)
+        intent.putExtra("answer", Answer)
 
         startActivity(intent)
     }
 
 
-    var result : String = ""
+    var result: String = ""
     var states = arrayOf(
         arrayOf(0, 0, 0, 0, 0),
         arrayOf(0, 0, 0, 0, 0),
@@ -97,8 +97,8 @@ class resultActivity : AppCompatActivity() {
     )
 
     companion object {
-        private var instance : resultActivity? = null
-        fun getInstance(): resultActivity{
+        private var instance: resultActivity? = null
+        fun getInstance(): resultActivity {
             if (instance == null)
                 instance = resultActivity()
             return instance!!
@@ -106,20 +106,21 @@ class resultActivity : AppCompatActivity() {
     }
 
     class GetArray() {
+
+        val resultAct = resultActivity.getInstance()
         fun main(args: Array<String>) {
             fun startGoal(a: Int, b: Int, c: Int, d: Int) {          //start goal
-                val resultAct = resultActivity.getInstance()
                 val grid = Grid(P(a, b), P(c, d)).apply {
                 }
                 Search(grid).execute(weight = 1.0)
-
-                startGoal(
-                    resultAct.startyoko,
-                    resultAct.starttate,
-                    resultAct.goalyoko,
-                    resultAct.goaltate
-                )
+                return
             }
+            startGoal(
+                resultAct.startyoko,
+                resultAct.starttate,
+                resultAct.goalyoko,
+                resultAct.goaltate
+            )
 
             fun makestates(
                 a0: Int, a1: Int, a2: Int, a3: Int, a4: Int,
@@ -136,37 +137,39 @@ class resultActivity : AppCompatActivity() {
                     arrayOf(d0, d1, d2, d3, d4,),
                     arrayOf(e0, e1, e2, e3, e4,),
                 )
-
-                makestates(
-                    resultAct.ary00,
-                    resultAct.ary01,
-                    resultAct.ary02,
-                    resultAct.ary03,
-                    resultAct.ary04,
-                    resultAct.ary10,
-                    resultAct.ary11,
-                    resultAct.ary12,
-                    resultAct.ary13,
-                    resultAct.ary14,
-                    resultAct.ary20,
-                    resultAct.ary21,
-                    resultAct.ary22,
-                    resultAct.ary23,
-                    resultAct.ary24,
-                    resultAct.ary30,
-                    resultAct.ary31,
-                    resultAct.ary32,
-                    resultAct.ary33,
-                    resultAct.ary34,
-                    resultAct.ary40,
-                    resultAct.ary41,
-                    resultAct.ary42,
-                    resultAct.ary43,
-                    resultAct.ary44
-                )
+                return
             }
+
+            makestates(
+                resultAct.ary00,
+                resultAct.ary01,
+                resultAct.ary02,
+                resultAct.ary03,
+                resultAct.ary04,
+                resultAct.ary10,
+                resultAct.ary11,
+                resultAct.ary12,
+                resultAct.ary13,
+                resultAct.ary14,
+                resultAct.ary20,
+                resultAct.ary21,
+                resultAct.ary22,
+                resultAct.ary23,
+                resultAct.ary24,
+                resultAct.ary30,
+                resultAct.ary31,
+                resultAct.ary32,
+                resultAct.ary33,
+                resultAct.ary34,
+                resultAct.ary40,
+                resultAct.ary41,
+                resultAct.ary42,
+                resultAct.ary43,
+                resultAct.ary44
+            )
         }
     }
+
     class Search(val grid: Grid) {
 
         fun execute(weight: Double) {
@@ -177,7 +180,7 @@ class resultActivity : AppCompatActivity() {
             if (costs == null) {
                 resultAct.result = "unreachable"
                 return
-            }else{
+            } else {
                 resultAct.result = costs[grid.goal].toString()
             }
         }
@@ -223,9 +226,8 @@ class resultActivity : AppCompatActivity() {
 
     //5,5
     class Grid(val start: P, val goal: P) {
-
+        val resultAct = resultActivity.getInstance()
         fun isValid(n: P): Boolean {
-            val resultAct = resultActivity.getInstance()
             return (n.i in resultAct.states.indices) && (n.j in resultAct.states[n.i].indices)
         }
 
@@ -243,6 +245,7 @@ class resultActivity : AppCompatActivity() {
             return n.around().filter { isValid(it) && isEmpty(it) }
         }
     }
+
     //Pointclass
     data class P(val i: Int, val j: Int) {
         fun around(): Array<P> {

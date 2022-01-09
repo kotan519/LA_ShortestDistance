@@ -15,8 +15,8 @@ class fivefiveAnswerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fivefive_answer_window)
 
-        val result : Int = intent.getStringExtra("Result").toString().toInt()
-        val Answer : Int = intent.getStringExtra("answer").toString().toInt()
+        val result : String? = intent.getStringExtra("Result")
+        val Answer : String? = intent.getStringExtra("answer")
 
         val AnswerText = findViewById<TextView>(R.id.answerText)
         val CorrectAnswer = findViewById<TextView>(R.id.correctAnswer)
