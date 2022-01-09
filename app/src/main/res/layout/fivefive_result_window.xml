@@ -5,7 +5,7 @@
     android:id="@+id/fivefiveResult"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".resultActivity">
+    tools:context=".fivefiveResultActivity">
 
 
     <EditText

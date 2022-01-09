@@ -15,21 +15,23 @@ class fivefiveAnswerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fivefive_answer_window)
 
-        val UnCorrectResult = intent.getStringExtra("UnCorrectResult")
-        val CorrectResult = intent.getIntExtra("CorrectResult",0)
-        val Answer = intent.getIntExtra("answer",1)
+        //val UnCorrectResult = intent.getStringExtra("UnCorrectResult")
+        //val CorrectResult = intent.getIntExtra("CorrectResult",0)
+        val Answer = intent.getIntExtra("answer",0)
 
         val AnswerText = findViewById<TextView>(R.id.answerText)
         val CorrectAnswer = findViewById<TextView>(R.id.correctAnswer)
 
-        if (UnCorrectResult == "Unreached"){
+        val ffResultAct = fivefiveResultActivity.getInstance()
+
+        if (ffResultAct.UnCorrectResult == "Unreached"){
             AnswerText.setText("到達できません")
         }
-        else if(CorrectResult == Answer){
+        else if(ffResultAct.CorrectResult == Answer){
             AnswerText.setText("正解です。")
         }else{
             AnswerText.setText("不正解です。")
-            CorrectAnswer.setText("正解は${CorrectResult}です。")
+            CorrectAnswer.setText("正解は${ffResultAct.CorrectResult}です。")
         }
 
         val returnstartbutton = findViewById<Button>(R.id.returnStartButton)
@@ -39,5 +41,25 @@ class fivefiveAnswerActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

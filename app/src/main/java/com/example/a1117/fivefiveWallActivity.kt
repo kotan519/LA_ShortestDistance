@@ -16,7 +16,7 @@ class fivefiveWallActivity : AppCompatActivity() {
         val backButton = findViewById<Button>(R.id.backButton)
 
         startButton.setOnClickListener {
-            val intent = Intent(this, resultActivity::class.java)
+            val intent = Intent(this, fivefiveResultActivity::class.java)
 
             val startYokoCoodinate = findViewById<EditText>(R.id.startYokoText).toString()
             val startTateCoodinate = findViewById<EditText>(R.id.startTateText).toString()
