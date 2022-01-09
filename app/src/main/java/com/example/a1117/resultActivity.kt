@@ -9,6 +9,9 @@ import android.view.View
 import android.widget.EditText
 
 class resultActivity : AppCompatActivity() {
+    var UnCorrectResult : String = ""
+    var CorrectResult = 0
+
     var startyoko = 0
     var starttate = 0
     var goalyoko = 0
@@ -80,14 +83,13 @@ class resultActivity : AppCompatActivity() {
     fun onbuttonClick(view: View) {
         val intent = Intent(this, fivefiveAnswerActivity::class.java)
         val Answer = findViewById<EditText>(R.id.answer).toString()
-        intent.putExtra("Result", result)
+        intent.putExtra("UnCorrectResult", UnCorrectResult)
+        intent.putExtra("CorrectResult", CorrectResult)
         intent.putExtra("answer", Answer)
 
         startActivity(intent)
     }
 
-
-    var result: String = ""
     var states = arrayOf(
         arrayOf(0, 0, 0, 0, 0),
         arrayOf(0, 0, 0, 0, 0),
@@ -178,10 +180,10 @@ class resultActivity : AppCompatActivity() {
             val costs = weightedAsterCost(weight)
 
             if (costs == null) {
-                resultAct.result = "unreachable"
+                resultAct.UnCorrectResult = "Unreached"
                 return
             } else {
-                resultAct.result = costs[grid.goal].toString()
+                resultAct.CorrectResult = costs[grid.goal].toString().toInt()
             }
         }
 
