@@ -9,6 +9,15 @@ import android.view.View
 import android.widget.EditText
 
 class resultActivity : AppCompatActivity() {
+    companion object {
+        private var instance: resultActivity? = null
+        fun getInstance(): resultActivity {
+            if (instance == null)
+                instance = resultActivity()
+            return instance!!
+        }
+    }
+
     var UnCorrectResult : String = ""
     var CorrectResult = 0
 
@@ -90,93 +99,16 @@ class resultActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    var states = arrayOf(
-        arrayOf(0, 0, 0, 0, 0),
-        arrayOf(0, 0, 0, 0, 0),
-        arrayOf(0, 0, 0, 0, 0),
-        arrayOf(0, 0, 0, 0, 0),
-        arrayOf(0, 0, 0, 0, 0),
-    )
 
-    companion object {
-        private var instance: resultActivity? = null
-        fun getInstance(): resultActivity {
-            if (instance == null)
-                instance = resultActivity()
-            return instance!!
+    fun main(args: Array<String>) {
+        val grid = Grid(P(startyoko,starttate), P(goalyoko,goaltate)).apply {
         }
-    }
-
-    class GetArray() {
-
-        val resultAct = resultActivity.getInstance()
-        fun main(args: Array<String>) {
-            fun startGoal(a: Int, b: Int, c: Int, d: Int) {          //start goal
-                val grid = Grid(P(a, b), P(c, d)).apply {
-                }
-                Search(grid).execute(weight = 1.0)
-                return
-            }
-            startGoal(
-                resultAct.startyoko,
-                resultAct.starttate,
-                resultAct.goalyoko,
-                resultAct.goaltate
-            )
-
-            fun makestates(
-                a0: Int, a1: Int, a2: Int, a3: Int, a4: Int,
-                b0: Int, b1: Int, b2: Int, b3: Int, b4: Int,
-                c0: Int, c1: Int, c2: Int, c3: Int, c4: Int,
-                d0: Int, d1: Int, d2: Int, d3: Int, d4: Int,
-                e0: Int, e1: Int, e2: Int, e3: Int, e4: Int
-            ) {
-                val resultAct = resultActivity.getInstance()
-                resultAct.states = arrayOf(
-                    arrayOf(a0, a1, a2, a3, a4),
-                    arrayOf(b0, b1, b2, b3, b4),
-                    arrayOf(c0, c1, c2, c3, c4),
-                    arrayOf(d0, d1, d2, d3, d4),
-                    arrayOf(e0, e1, e2, e3, e4),
-                )
-                return
-            }
-
-            makestates(
-                resultAct.ary00,
-                resultAct.ary01,
-                resultAct.ary02,
-                resultAct.ary03,
-                resultAct.ary04,
-                resultAct.ary10,
-                resultAct.ary11,
-                resultAct.ary12,
-                resultAct.ary13,
-                resultAct.ary14,
-                resultAct.ary20,
-                resultAct.ary21,
-                resultAct.ary22,
-                resultAct.ary23,
-                resultAct.ary24,
-                resultAct.ary30,
-                resultAct.ary31,
-                resultAct.ary32,
-                resultAct.ary33,
-                resultAct.ary34,
-                resultAct.ary40,
-                resultAct.ary41,
-                resultAct.ary42,
-                resultAct.ary43,
-                resultAct.ary44
-            )
-        }
+        Search(grid).execute(weight = 1.0)
     }
 
     class Search(val grid: Grid) {
-
+        val resultAct = resultActivity.getInstance()
         fun execute(weight: Double) {
-
-            val resultAct = resultActivity.getInstance()
             val costs = weightedAsterCost(weight)
 
             if (costs == null) {
@@ -229,14 +161,21 @@ class resultActivity : AppCompatActivity() {
     //5,5
     class Grid(val start: P, val goal: P) {
         val resultAct = resultActivity.getInstance()
+        val states = arrayOf(
+            arrayOf(resultAct.ary00, resultAct.ary01, resultAct.ary02, resultAct.ary03, resultAct.ary04),
+            arrayOf(resultAct.ary10, resultAct.ary11, resultAct.ary12, resultAct.ary13, resultAct.ary14),
+            arrayOf(resultAct.ary20, resultAct.ary21, resultAct.ary22, resultAct.ary23, resultAct.ary24),
+            arrayOf(resultAct.ary30, resultAct.ary31, resultAct.ary32, resultAct.ary33, resultAct.ary34),
+            arrayOf(resultAct.ary40, resultAct.ary41, resultAct.ary42, resultAct.ary43, resultAct.ary44),
+        )
+
         fun isValid(n: P): Boolean {
-            return (n.i in resultAct.states.indices) && (n.j in resultAct.states[n.i].indices)
+            return (n.i in states.indices) && (n.j in states[n.i].indices)
         }
 
         fun state(n: P): Int {
-            val resultAct = resultActivity.getInstance()
             check(isValid(n)) { "out of range $n" }
-            return resultAct.states[n.i][n.j]
+            return states[n.i][n.j]
         }
 
         fun isEmpty(n: P): Boolean {
