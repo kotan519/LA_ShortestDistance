@@ -11,13 +11,11 @@ class startWindowActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.start_window)
+    }
 
-        val fivefivebutton = findViewById<Button>(R.id.fivefiveButton)
-
-        fivefivebutton.setOnClickListener{
-            val intent = Intent(this, fivefiveWallActivity :: class.java)
-            startActivity(intent)
-        }
+    fun onbutton5Click(view: View) {
+        val intent = Intent(this, fivefiveWallActivity :: class.java)
+        startActivity(intent)
     }
 }
 
