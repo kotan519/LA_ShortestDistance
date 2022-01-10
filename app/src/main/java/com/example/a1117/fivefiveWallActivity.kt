@@ -16,12 +16,15 @@ class fivefiveWallActivity : AppCompatActivity() {
         val backButton = findViewById<Button>(R.id.backButton)
 
         startButton.setOnClickListener {
-            val intent = Intent(this, fivefiveResultActivity::class.java)
+            var startYokoCoodinate = findViewById<EditText>(R.id.startYokoText).toString()
+            var startTateCoodinate = findViewById<EditText>(R.id.startTateText).toString()
+            var goalYokoCoodinate = findViewById<EditText>(R.id.goalYokoText).toString()
+            var goalTateCoodinate = findViewById<EditText>(R.id.goalTateText).toString()
 
-            val startYokoCoodinate = findViewById<EditText>(R.id.startYokoText).toString()
-            val startTateCoodinate = findViewById<EditText>(R.id.startTateText).toString()
-            val goalYokoCoodinate = findViewById<EditText>(R.id.goalYokoText).toString()
-            val goalTateCoodinate = findViewById<EditText>(R.id.goalTateText).toString()
+            /*var startyokoCoodinate : Int = startYokoCoodinate.toInt()
+            var starttateCoodinate : Int = startTateCoodinate.toInt()
+            var goalyokoCoodinate : Int = goalYokoCoodinate.toInt()
+            var goaltateCoodinate : Int = goalTateCoodinate.toInt()*/
 
             val edittext00 = findViewById<EditText>(R.id.editText00).toString()
             val edittext01 = findViewById<EditText>(R.id.editText01).toString()
@@ -49,6 +52,7 @@ class fivefiveWallActivity : AppCompatActivity() {
             val edittext43 = findViewById<EditText>(R.id.editText43).toString()
             val edittext44 = findViewById<EditText>(R.id.editText44).toString()
 
+            val intent = Intent(this, fivefiveResultActivity::class.java)
             intent.putExtra("startYoko", startYokoCoodinate)
             intent.putExtra("startTate", startTateCoodinate)
             intent.putExtra("goalYoko", goalYokoCoodinate)

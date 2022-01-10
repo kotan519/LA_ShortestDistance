@@ -22,7 +22,7 @@ class fivefiveAnswerActivity : AppCompatActivity() {
         val AnswerText = findViewById<TextView>(R.id.answerText)
         val CorrectAnswer = findViewById<TextView>(R.id.correctAnswer)
 
-        val ffResultAct = fivefiveResultActivity.getInstance()
+        val ffResultAct = resultOfAlgorithm.getInstance()
 
         if (ffResultAct.UnCorrectResult == "Unreached"){
             AnswerText.setText("到達できません")
