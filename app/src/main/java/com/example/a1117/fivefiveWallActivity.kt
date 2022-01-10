@@ -3,6 +3,7 @@ package com.example.a1117
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.view.View
 import android.widget.EditText
 import android.widget.Button
@@ -93,6 +94,7 @@ class fivefiveWallActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
 }
 
 

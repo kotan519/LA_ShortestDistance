@@ -27,7 +27,7 @@ class fivefiveAnswerActivity : AppCompatActivity() {
         if (ffResultAct.UnCorrectResult == "Unreached"){
             AnswerText.setText("到達できません")
         }
-        else if(ffResultAct.CorrectResult == Answer){
+        else if(ffResultAct.CorrectResult.toInt() == Answer){
             AnswerText.setText("正解です。")
         }else{
             AnswerText.setText("不正解です。")
