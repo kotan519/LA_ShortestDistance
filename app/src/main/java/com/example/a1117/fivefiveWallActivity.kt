@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.Button
 
 class fivefiveWallActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fivefive_wall_window)
@@ -16,10 +17,10 @@ class fivefiveWallActivity : AppCompatActivity() {
         val backButton = findViewById<Button>(R.id.backButton)
 
         startButton.setOnClickListener {
-            var startYokoCoodinate = findViewById<EditText>(R.id.startYokoText).toString()
-            var startTateCoodinate = findViewById<EditText>(R.id.startTateText).toString()
-            var goalYokoCoodinate = findViewById<EditText>(R.id.goalYokoText).toString()
-            var goalTateCoodinate = findViewById<EditText>(R.id.goalTateText).toString()
+            val startYokoCoodinate: String = findViewById<EditText>(R.id.startYokoText).getString().toString()
+            val startTateCoodinate = findViewById<EditText>(R.id.startTateText).toString()
+            val goalYokoCoodinate = findViewById<EditText>(R.id.goalYokoText).toString()
+            val goalTateCoodinate = findViewById<EditText>(R.id.goalTateText).toString()
 
             /*var startyokoCoodinate : Int = startYokoCoodinate.toInt()
             var starttateCoodinate : Int = startTateCoodinate.toInt()
